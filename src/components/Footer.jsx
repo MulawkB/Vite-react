@@ -2,10 +2,10 @@ function Footer() {
     return (
         <footer>
             <small>
-                <p>Copyright Mexican Food 2024</p>
+                Copyright Mexican Food 2024
             </small>
         </footer>
-    )
+    );
 }
 
 export default Footer;
