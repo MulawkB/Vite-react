@@ -4,12 +4,18 @@ import '../assets/styles/dish.scss'
 function Dish({image,name,price}) {
     return (  
       <Card>
-        <img 
+        <Card.Img
         src={image}
         alt={name}
         />
-        <h3>{name}</h3>
-        <p>{price}€</p>
+        <Card.Body>
+          <Card.Title>
+          {name}
+          </Card.Title>
+          <Card.Text>
+          {price}€
+          </Card.Text>
+        </Card.Body>
       </Card>
     );
   }
