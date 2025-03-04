@@ -1,12 +1,16 @@
+import { Card } from "react-bootstrap"
+import '../assets/styles/dish.scss'
+
 function Dish({image,name,price}) {
     return (  
-      <div>
-        <img src={image}
+      <Card>
+        <img 
+        src={image}
         alt={name}
         />
         <h3>{name}</h3>
         <p>{price}€</p>
-      </div>
+      </Card>
     );
   }
 
