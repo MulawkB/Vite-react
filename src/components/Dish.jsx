@@ -1,9 +1,11 @@
 import { Card } from "react-bootstrap"
+import Badge from 'react-bootstrap/Badge';
 import '../assets/styles/dish.scss'
 
-function Dish({image,name,price}) {
+function Dish({isnew,image,name,price}) {
     return (  
       <Card>
+        {isnew && <Badge bg = "primary" className ="position-absolute end-0 mt-2 me-2">Nouveau</Badge>}
         <Card.Img
         src={image}
         alt={name}
@@ -19,5 +21,4 @@ function Dish({image,name,price}) {
       </Card>
     );
   }
-
 export default Dish;
