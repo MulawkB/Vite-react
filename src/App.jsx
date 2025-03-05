@@ -16,12 +16,14 @@ function App() {
       stock: 12
     },
     {
+      isnew: false,
       image: "https://cdn.pixabay.com/photo/2014/01/14/22/13/mexican-245240_960_720.jpg",
       name: "Enchiladas",
       price: 12,
       stock: 0
     },
     {
+      isnew: false,
       image: "https://cdn.pixabay.com/photo/2021/02/04/03/57/mole-5980185_960_720.jpg",
       name: "Mole poblano",
       price: 15,
@@ -30,16 +32,15 @@ function App() {
   ];
   const handleShowNewOnly = () => {
     setShowNewOnly( (showNewOnly) => !showNewOnly);
-    console.log(showNewOnly)
   };
-  const filteredDishes = dishes.filter( dish => dish.stock > 0 && showNewOnly || dish.isnew == true );
+  const filteredDishes = dishes.filter( dish => dish.stock > 0 && (!showNewOnly || dish.isnew == true) );
   return (
     <>
       <Header/>
 
       <main>
         <Container>
-          <Button variant="outline-primary mb-2" onClick={handleShowNewOnly} > {showNewOnly ? "Nouveautés uniquement" : "Voir tous les plats"}</Button>
+          <Button variant="outline-primary mb-2" onClick={handleShowNewOnly} > {!showNewOnly ? "Nouveautés uniquement" : "Voir tous les plats"}</Button>
           <Row>
             
             {filteredDishes.map((dish, index) => {
