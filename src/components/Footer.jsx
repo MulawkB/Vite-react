@@ -1,13 +1,11 @@
-import '../assets/styles/footer.scss'
+import "../assets/styles/footer.scss";
 
 function Footer() {
-    return (
-        <footer>
-            <small>
-                Copyright Mexican Food 2024
-            </small>
-        </footer>
-    );
+  return (
+    <footer>
+      <small>Copyright Mexican Food 2024</small>
+    </footer>
+  );
 }
 
 export default Footer;

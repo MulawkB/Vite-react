@@ -43,7 +43,6 @@ function App() {
   const { cartCount } = useContext(CartContext);
   const prevCartCountRef = useRef(cartCount);
 
-
   useEffect(() => {
     prevCartCountRef.current = cartCount;
   }, [cartCount]);
@@ -51,6 +50,7 @@ function App() {
   const filteredDishes = dishes.filter(
     (dish) => dish.stock > 0 && (!showNewOnly || dish.isnew == true)
   );
+
   return (
     <>
       <Header />
