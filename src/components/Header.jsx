@@ -20,7 +20,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="/">Acceuil</Nav.Link>
-            <Nav.Item>Panier ({cartCount})</Nav.Item>
+            <Nav.Item className="nav-link">Panier ({cartCount})</Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
