@@ -40,8 +40,9 @@ function App() {
 
   const [showNewOnly, setShowNewOnly] = useState(false);
 
-  const prevCartCountRef = useRef(0);
   const { cartCount } = useContext(CartContext);
+  const prevCartCountRef = useRef(cartCount);
+
 
   useEffect(() => {
     prevCartCountRef.current = cartCount;
